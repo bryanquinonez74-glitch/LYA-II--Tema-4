@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.brayansystem.analizadorsemantico.controller.AnalizadorSController">
+
+    <top>
+
+        <VBox spacing="8">
+
+            <padding>
+                <Insets top="20"
+                        right="25"
+                        bottom="20"
+                        left="25"/>
+            </padding>
+
+            <Label text="ANALIZADOR SEMÁNTICO"
+                   style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+            <Label text="Lenguajes y Autómatas II"
+                   style="-fx-font-size: 15px;"/>
+
+            <Separator/>
+
+        </VBox>
+
+    </top>
+
+
+    <center>
+
+        <VBox spacing="20"
+              alignment="CENTER">
+
+            <Label text="Proyecto JavaFX"
+                   style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+            <Label text="Sistema de análisis léxico, sintáctico y semántico"
+                   style="-fx-font-size: 16px;"/>
+
+            <HBox spacing="15"
+                  alignment="CENTER">
+
+                <Button text="Analizar"
+                        prefWidth="130"
+                        prefHeight="40"/>
+
+                <Button text="Limpiar"
+                        prefWidth="130"
+                        prefHeight="40"/>
+
+            </HBox>
+
+        </VBox>
+
+    </center>
+
+
+    <bottom>
+
+        <VBox>
+
+            <padding>
+                <Insets top="15"
+                        right="25"
+                        bottom="20"
+                        left="25"/>
+            </padding>
+
+            <Label text="Lenguajes y Autómatas II"
+                   style="-fx-font-size: 12px;"/>
+
+        </VBox>
+
+    </bottom>
+
+</BorderPane>

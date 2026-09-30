@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox
+        xmlns="http://javafx.com/javafx/22"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.braynsystem.generadorcodigoobjeto.controller.SimbolosController"
+        spacing="15"
+        style="-fx-background-color: #F3F4F6;">
+
+    <padding>
+        <Insets top="25" right="35" bottom="25" left="35"/>
+    </padding>
+
+    <Label
+            text="Tabla de Símbolos"
+            style="
+                -fx-font-size: 28px;
+                -fx-font-weight: bold;
+                -fx-text-fill: #1F2937;
+            "/>
+
+    <Label
+            text="Información de las variables identificadas durante el análisis."
+            style="
+                -fx-font-size: 14px;
+                -fx-text-fill: #6B7280;
+            "/>
+
+    <Button
+            text="Actualizar tabla"
+            onAction="#actualizarTabla"
+            prefWidth="180"
+            prefHeight="40"
+            style="
+                -fx-background-color: #2563EB;
+                -fx-text-fill: white;
+                -fx-font-weight: bold;
+                -fx-background-radius: 7px;
+            "/>
+
+    <TableView
+            fx:id="tablaSimbolos"
+            prefHeight="400">
+
+        <columns>
+
+            <TableColumn
+                    text="Nombre"
+                    prefWidth="150">
+
+                <cellValueFactory>
+                    <PropertyValueFactory property="nombre"/>
+                </cellValueFactory>
+
+            </TableColumn>
+
+            <TableColumn
+                    text="Tipo"
+                    prefWidth="120">
+
+                <cellValueFactory>
+                    <PropertyValueFactory property="tipo"/>
+                </cellValueFactory>
+
+            </TableColumn>
+
+            <TableColumn
+                    text="Valor"
+                    prefWidth="150">
+
+                <cellValueFactory>
+                    <PropertyValueFactory property="valor"/>
+                </cellValueFactory>
+
+            </TableColumn>
+
+            <TableColumn
+                    text="Dirección"
+                    prefWidth="150">
+
+                <cellValueFactory>
+                    <PropertyValueFactory property="direccionMemoria"/>
+                </cellValueFactory>
+
+            </TableColumn>
+
+            <TableColumn
+                    text="Registro"
+                    prefWidth="120">
+
+                <cellValueFactory>
+                    <PropertyValueFactory property="registro"/>
+                </cellValueFactory>
+
+            </TableColumn>
+
+        </columns>
+
+    </TableView>
+
+</VBox>

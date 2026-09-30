@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox
+        xmlns="http://javafx.com/javafx/21"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.braynsystem.generadorcodigoobjeto.controller.AnalisisController"
+        spacing="15"
+        style="-fx-background-color: #F3F4F6;">
+
+    <padding>
+        <Insets
+                top="25"
+                right="30"
+                bottom="25"
+                left="30"/>
+    </padding>
+
+
+    <!-- TÍTULO -->
+
+    <Label
+            text="Análisis Semántico"
+            style="
+                -fx-font-size: 26px;
+                -fx-font-weight: bold;
+                -fx-text-fill: #1F2937;
+            "/>
+
+
+    <!-- DESCRIPCIÓN -->
+
+    <Label
+            text="Introduzca el código fuente para realizar el análisis semántico."
+            style="
+                -fx-font-size: 14px;
+                -fx-text-fill: #6B7280;
+            "/>
+
+
+    <!-- CÓDIGO FUENTE -->
+
+    <Label
+            text="Código fuente"
+            style="
+                -fx-font-size: 15px;
+                -fx-font-weight: bold;
+                -fx-text-fill: #374151;
+            "/>
+
+
+    <TextArea
+            fx:id="txtCodigo"
+            prefHeight="160"
+            promptText="Ejemplo:
+int a = 10;
+int b = 20;
+int c = a + b;"
+            style="
+                -fx-font-family: monospace;
+                -fx-font-size: 14px;
+            "/>
+
+
+    <!-- BOTONES -->
+
+    <HBox
+            spacing="10">
+
+        <Button
+                text="Analizar Código"
+                onAction="#analizarCodigo"
+                prefWidth="170"
+                prefHeight="40"
+                style="
+                    -fx-background-color: #2563EB;
+                    -fx-text-fill: white;
+                    -fx-font-weight: bold;
+                    -fx-background-radius: 7px;
+                    -fx-cursor: hand;
+                "/>
+
+        <Button
+                text="Limpiar"
+                onAction="#limpiar"
+                prefWidth="120"
+                prefHeight="40"
+                style="
+                    -fx-background-color: #DC2626;
+                    -fx-text-fill: white;
+                    -fx-font-weight: bold;
+                    -fx-background-radius: 7px;
+                    -fx-cursor: hand;
+                "/>
+
+    </HBox>
+
+
+    <!-- RESULTADO -->
+
+    <Label
+            fx:id="lblResultado"
+            text="Resultado del análisis"
+            wrapText="true"
+            style="
+                -fx-font-size: 14px;
+                -fx-text-fill: #374151;
+            "/>
+
+
+    <!-- TABLA -->
+
+    <Label
+            text="Tabla de Símbolos"
+            style="
+                -fx-font-size: 16px;
+                -fx-font-weight: bold;
+                -fx-text-fill: #374151;
+            "/>
+
+
+    <TableView
+            fx:id="tablaSimbolos"
+            prefHeight="220">
+
+        <columns>
+
+            <TableColumn
+                    fx:id="colNombre"
+                    text="Nombre"
+                    prefWidth="130"/>
+
+            <TableColumn
+                    fx:id="colTipo"
+                    text="Tipo"
+                    prefWidth="100"/>
+
+            <TableColumn
+                    fx:id="colValor"
+                    text="Valor"
+                    prefWidth="180"/>
+
+            <TableColumn
+                    fx:id="colMemoria"
+                    text="Dirección de memoria"
+                    prefWidth="180"/>
+
+            <TableColumn
+                    fx:id="colRegistro"
+                    text="Registro"
+                    prefWidth="120"/>
+
+        </columns>
+
+    </TableView>
+
+</VBox>
